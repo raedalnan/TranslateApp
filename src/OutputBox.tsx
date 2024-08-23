@@ -69,7 +69,7 @@ function OutputBox() {
   };
 
   return (
-    <div className="w-full max-w-full h-96 bg-charcoal-80 rounded-3xl border border-slate-blue flex flex-col  px-6 sm:px-8 md:px-10 pb-6 pt-4">
+    <div className="w-full max-w-full h-96 bg-midnight-80 rounded-3xl border border-slate-blue flex flex-col  px-6 sm:px-8 md:px-10 pb-6 pt-4">
       <div className="border-b-2 border-slate-blue p-2 pb-3 mb-4 h-auto w-full flex flex-row justify-between items-start sm:items-center">
         <ul className="text-slate-blue text-xs md:text-lg font-semibold flex flex-row justify-start items-center gap-3 md:gap-8 w-full cursor-pointer">
           <li
