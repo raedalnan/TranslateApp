@@ -38,6 +38,15 @@ function InputBox() {
       console.error('Language not found');
     }
   };
+  function debounce(func: any, timeout = 300) {
+    let timer: any;
+    return () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        func();
+      }, timeout);
+    };
+  }
 
   function handleClick() {
     if (originText) {
@@ -75,7 +84,8 @@ function InputBox() {
   useEffect(() => {
     handleClick();
   }, []);
-
+  useEffect(() => debounce(handleClick, 500), [originText]);
+  // you should fix the delay in updating the output language name
   return (
     <div className="w-full max-w-full h-96 bg-charcoal-80 rounded-3xl border border-slate-blue flex flex-col  px-6 sm:px-8 md:px-10 pb-6 pt-4">
       <div className="border-b-2 border-slate-blue p-2 pb-3 mb-4 h-auto w-full flex flex-row justify-between items-start sm:items-center">
